@@ -1,0 +1,5 @@
+---
+type: location
+---
+
+Poor Eric :(
