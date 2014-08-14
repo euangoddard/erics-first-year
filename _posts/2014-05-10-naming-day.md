@@ -1,6 +1,6 @@
 ---
 title: "Naming day"
-type: "location"
+type: event
 ---
 
 Eric had his naming day with many friends and family.

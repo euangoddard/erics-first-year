@@ -1,5 +1,5 @@
 ---
-type: picture
+type: first
 ---
 
 It's super-classy

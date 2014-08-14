@@ -1,6 +1,6 @@
 ---
 title: "First solid food"
-type: "location"
+type: first
 ---
 
 Eric loved his porridge!

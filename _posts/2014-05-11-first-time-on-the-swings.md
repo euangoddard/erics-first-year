@@ -1,6 +1,6 @@
 ---
 title: "First time on the swings"
-type: "picture"
+type: first
 ---
 
 A quick trip to the local playground afforded a go on the swings.

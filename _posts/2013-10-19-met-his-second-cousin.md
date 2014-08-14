@@ -1,5 +1,5 @@
 ---
-type: picture
+type: meet
 ---
 
 Thomas was very pleased to meet Eric

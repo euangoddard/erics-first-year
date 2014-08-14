@@ -1,6 +1,6 @@
 ---
 title: "First shoes"
-type: picture
+type: first
 ---
 
 Eric needed some shoes to support his walking when he was outside.

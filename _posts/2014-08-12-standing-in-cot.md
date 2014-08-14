@@ -1,6 +1,6 @@
 ---
 title: "Found standing in his cot"
-type: picture
+type: first
 ---
 
 Found standing in his cot for the first time.

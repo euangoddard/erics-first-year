@@ -1,6 +1,6 @@
 ---
 title: "Pulled himself to standing"
-type: picture
+type: first
 ---
 
 In the bath with the slippery bottom, no less!

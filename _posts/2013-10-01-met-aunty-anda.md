@@ -1,6 +1,6 @@
 ---
 title: "Met his aunty Anda"
-type: picture
+type: meet
 ---
 
 Aunty Anda came to visit him in hospital.

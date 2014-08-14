@@ -1,5 +1,5 @@
 ---
-type: location
+type: first
 ---
 
 Poor Eric :(

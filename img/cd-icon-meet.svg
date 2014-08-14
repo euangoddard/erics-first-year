@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated. 
+You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="411.99936"
+   height="412"
+   viewBox="0 0 411.99936 412"
+   enable-background="new 0 0 512 512"
+   xml:space="preserve"
+   id="svg3032"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="cd-icon-meet.svg"><metadata
+     id="metadata3041"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs3039" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview3037"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.46875"
+     inkscape:cx="205.99968"
+     inkscape:cy="205.65"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3032" /><style
+     type="text/css"
+     id="style3034">
+    #user-icon {fill:#FFFFFF;}
+</style><path
+     id="user-icon"
+     d="m 357.44768,310.82399 c -59.036,-13.617 -113.989,-25.541 -87.375,-75.717 81.01,-152.729001 21.473,-234.40600123 -64.072,-234.40600123 -87.231,0 -145.302999,84.81200023 -64.072,234.40600123 27.412,50.482 -29.608,62.393 -87.374999,75.717 -59.0119995,13.609 -54.47299952,44.723 -54.47299952,101.176 H 411.91868 c 0,-56.454 4.539,-87.567 -54.471,-101.176 z"
+     inkscape:connector-curvature="0"
+     style="fill:#ffffff" /></svg>

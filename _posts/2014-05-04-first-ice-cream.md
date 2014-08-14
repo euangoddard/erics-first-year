@@ -1,6 +1,6 @@
 ---
 title: "First ice cream"
-type: "location"
+type: first
 ---
 
 Eric loved a Mr Whippy in Leamington Spa with granddad.

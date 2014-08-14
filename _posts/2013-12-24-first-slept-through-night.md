@@ -1,6 +1,6 @@
 ---
 title: "First slept through the night"
-type: location
+type: first
 ---
 
 Best Christmas present ever!
