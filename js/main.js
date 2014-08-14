@@ -1,19 +1,37 @@
-jQuery(document).ready(function($){
-	var $timeline_block = $('.cd-timeline-block');
+(function ($) {
+    'use strict';
 
-	//hide timeline blocks which are outside the viewport
-	$timeline_block.each(function(){
-		if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
-			$(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-		}
-	});
+    var $timeline_block;
 
-	//on scolling, show/animate timeline blocks when enter the viewport
-	$(window).on('scroll', function(){
-		$timeline_block.each(function(){
-			if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
-				$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-			}
-		});
-	});
-});
+    $(function () {
+        $timeline_block = $('.cd-timeline-block');
+        hide_timeline_blocks_outside_viewport();
+        $(window).on('scroll', show_timeline_blocks_outside_viewport);
+    });
+
+    var hide_timeline_blocks_outside_viewport = function () {
+        var cut_off_top = get_cut_off_top();
+        $timeline_block.each(function () {
+            var $block = $(this);
+            if ($block.offset().top > cut_off_top) {
+                $block.find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+            }
+        });
+    };
+
+    var show_timeline_blocks_outside_viewport = function () {
+        var cut_off_top = get_cut_off_top();
+        $timeline_block.each(function () {
+            var $block = $(this);
+            if ($block.offset().top <= cut_off_top && $block.find('.cd-timeline-img').hasClass('is-hidden')) {
+                $block.find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+            }
+        });
+    };
+
+    var get_cut_off_top = function () {
+        var cut_off_top = $(window).scrollTop() + $(window).height() * 0.75;
+        return cut_off_top;
+    };
+
+}(window.jQuery));
