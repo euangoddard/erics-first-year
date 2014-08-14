@@ -4,4 +4,4 @@ type: meet
 
 Thomas was very pleased to meet Eric
 
-![A cat](http://placekitten.com/g/600/600)
+![With Thomas](img/photos/2013-10-19-thomas.jpg)

@@ -1,6 +1,8 @@
 ---
-title: "Met his aunty Anda"
+title: "Met his aunty Anda and 'aunty' Charlotte"
 type: meet
 ---
 
-Aunty Anda came to visit him in hospital.
+![Anda](img/photos/2013-10-01-anda.jpg)
+
+![Charlotte](img/photos/2013-10-01-charlotte.jpg)
