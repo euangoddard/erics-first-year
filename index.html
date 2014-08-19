@@ -18,3 +18,9 @@ layout: default
   </div>
   {% endfor %}
 </section>
+
+<footer>
+  {% for post in site.posts %}
+    <span data-post-date="{{ post.date | date_to_rfc822 }}" class="dot-{{ post.type }}"></span>
+  {% endfor %}
+</footer>
