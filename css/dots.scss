@@ -1,0 +1,110 @@
+---
+---
+
+$footer_height: 3em;
+
+$dot_size: 1em;
+$dot_alpha: 0.7;
+$dot_desaturation: 30%;
+
+$color_event: rgba(#f0ca45, $dot_alpha);
+$color_meet: rgba(#c03b44, $dot_alpha);
+$color_first: rgba(#75ce66, $dot_alpha);
+
+
+@mixin box-sizing($type: border-box) {
+    -moz-box-sizing: $type;
+    -webkit-box-sizing: $type;
+    box-sizing: $type;
+}
+
+@mixin transform($transform) {
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transform-origin($origin) {
+    -moz-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+
+footer {
+    position: fixed;
+    height: $footer_height;
+    width: 100%;
+    background-color: rgba(#303e49, 0.3);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 $dot_size;
+    @include box-sizing();
+
+    .dots {
+        width: 100%;
+        position: absolute;
+        height: $footer_height;
+    }
+
+    .dot {
+        position: absolute;
+        background-color: #fff;
+        width: $dot_size;
+        height: $dot_size;
+        display: block;
+        border-radius: $dot_size;
+        top: ($footer_height - $dot_size) / 2;
+        cursor: pointer;
+        box-shadow: 0 0 0 2px white;
+
+        &.dot-event {
+            background: desaturate($color_event, $dot_desaturation);
+
+            &:hover {
+                background: $color_event;
+            }
+        }
+        &.dot-meet {
+            background: desaturate($color_meet, $dot_desaturation);
+
+            &:hover {
+                background: $color_meet;
+            }
+        }
+        &.dot-first {
+            background: desaturate($color_first, $dot_desaturation);
+
+            &:hover {
+                background: $color_first;
+            }
+        }
+
+        &::after {
+            content: attr(data-post-title);
+            display: block;
+            max-width: 20em;
+            float: left;
+            @include transform(rotateZ(-90deg));
+            @include transform-origin(0 0);
+            padding-left: $dot_size * 1.5;
+            text-shadow: 0 0 2px rgba(#d7e4ed, 0.3);
+            font-family: "Droid Serif", serif;
+            white-space: nowrap;
+
+            opacity: 0;
+        }
+        &:hover::after {
+            opacity: 1;
+        }
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    footer {
+        display: none;
+    }
+}

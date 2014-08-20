@@ -4,7 +4,7 @@ layout: default
 
 <section id="cd-timeline" class="cd-container">
   {% for post in site.posts reversed %}
-  <div class="cd-timeline-block">
+  <div class="cd-timeline-block" id="{{ post.id | remove_first : '/' | replace: '/', '-' }}">
     <div class="cd-timeline-img cd-{{ post.type }}">
       <img src="img/cd-icon-{{ post.type }}.svg" alt="{{ post.type | title }}">
     </div>
@@ -19,8 +19,21 @@ layout: default
   {% endfor %}
 </section>
 
-<footer>
-  {% for post in site.posts %}
-    <span data-post-date="{{ post.date | date_to_rfc822 }}" class="dot-{{ post.type }}"></span>
-  {% endfor %}
+{% assign first_post = site.posts | last %}
+{% assign last_post = site.posts | first %}
+<footer
+  data-start-date="{{ first_post.date | date_to_rfc822 }}"
+  data-end-date="{{ last_post.date | date_to_rfc822 }}"
+>
+  <div class="dots">
+    {% for post in site.posts %}
+      <i
+        class="dot dot-{{ post.type }}"
+        data-post-date="{{ post.date | date_to_rfc822 }}"
+        data-post-id="{{ post.id | remove_first : '/' | replace: '/', '-' }}"
+        data-post-title="{{ post.title }}"
+      >
+      </i>
+    {% endfor %}
+  </div>
 </footer>
