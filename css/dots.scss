@@ -32,6 +32,13 @@ $color_first: rgba(#75ce66, $dot_alpha);
     transform-origin: $origin;
 }
 
+@mixin transition($transition) {
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
 
 footer {
     position: fixed;
@@ -86,7 +93,6 @@ footer {
         &::after {
             content: attr(data-post-title);
             display: block;
-            max-width: 20em;
             float: left;
             @include transform(rotateZ(-90deg));
             @include transform-origin(0 0);
@@ -94,17 +100,24 @@ footer {
             text-shadow: 0 0 2px rgba(#d7e4ed, 0.3);
             font-family: "Droid Serif", serif;
             white-space: nowrap;
-
             opacity: 0;
         }
         &:hover::after {
             opacity: 1;
+            @include transition(opacity 0.2s linear);
         }
     }
+}
+
+body {
+    padding-bottom: $footer_height;
 }
 
 @media only screen and (max-width: 1023px) {
     footer {
         display: none;
+    }
+    body {
+        padding-bottom: inherit;
     }
 }
