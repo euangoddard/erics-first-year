@@ -55,10 +55,21 @@
         }
     };
 
+    var debounce = function (fn, delay) {
+        var timer = null;
+        return function () {
+            var context = this, args = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                fn.apply(context, args);
+            }, delay);
+        };
+    };
+
 
     $(function () {
         hide_timeline_blocks_outside_viewport();
-        $(window).on('scroll', show_timeline_blocks_inside_viewport);
+        $(window).on('scroll', debounce(show_timeline_blocks_inside_viewport, 250));
         
         position_dots();
         $(document).on('click', '.dot', jump_to_post);
