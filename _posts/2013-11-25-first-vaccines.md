@@ -2,4 +2,4 @@
 type: first
 ---
 
-Eric was very brave
+Eric was very brave.

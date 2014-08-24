@@ -5,4 +5,4 @@ type: first
 
 Eric left hospital after 5 days.
 
-Mummy finally got to have pate after 9 months.
+Mummy finally got to have pat&eacute; after 9 months.

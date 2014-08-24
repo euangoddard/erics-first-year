@@ -2,4 +2,4 @@
 type: first
 ---
 
-Mama when he bumped his head
+*Mama* when he bumped his head.
