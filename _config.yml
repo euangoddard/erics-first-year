@@ -1,7 +1,7 @@
 # Site settings
 title: "Eric's first year"
 baseurl: ""
-url: "http://euangoddard.github.io/eric-first-year"
+url: "http://euangoddard.github.io/erics-first-year"
 
 # Build settings
 markdown: kramdown
