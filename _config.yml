@@ -6,3 +6,4 @@ url: "http://euangoddard.github.io/eric-first-year"
 # Build settings
 markdown: kramdown
 future: true
+exclude: ['README.md', 'LICENSE']
