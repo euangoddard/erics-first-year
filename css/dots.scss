@@ -69,28 +69,32 @@ footer {
         &.dot-event {
             background: desaturate($color_event, $dot_desaturation);
 
-            &:hover {
+            &:hover,
+            &.active {
                 background: $color_event;
             }
         }
         &.dot-meet {
             background: desaturate($color_meet, $dot_desaturation);
 
-            &:hover {
+            &:hover,
+            &.active {
                 background: $color_meet;
             }
         }
         &.dot-first {
             background: desaturate($color_first, $dot_desaturation);
 
-            &:hover {
+            &:hover,
+            &.active {
                 background: $color_first;
             }
         }
         &.dot-tooth {
             background: desaturate($color_tooth, $dot_desaturation);
 
-            &:hover {
+            &:hover,
+            &.active {
                 background: $color_tooth;
             }
         }

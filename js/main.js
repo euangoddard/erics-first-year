@@ -1,6 +1,8 @@
 (function ($) {
     'use strict';
 
+    var post_ids_by_top_offset = {};
+
     var hide_timeline_blocks_outside_viewport = function () {
         var cut_off_top = get_cut_off_top();
         $('.cd-timeline-block').each(function () {
@@ -55,6 +57,32 @@
         }
     };
 
+    var cache_posts_top_positions = function () {
+        $('.cd-timeline-block').each(function () {
+            var $block = $(this);
+            var post_top_offset = parseInt($block.offset().top, 10);
+            post_ids_by_top_offset[post_top_offset] = $block.attr('id');
+        });
+    };
+
+    var highlight_active_post_dot = function () {
+        var y_offset = $(window).scrollTop();
+        var post_id;
+        while (0 < y_offset) {
+            post_id = post_ids_by_top_offset[y_offset];
+            if (typeof post_id === 'undefined') {
+                y_offset -= 1;
+            } else {
+                break;
+            }
+        }
+
+        if (post_id) {
+            $('.dot').removeClass('active');
+            $('[data-post-id="' + post_id + '"]').addClass('active');
+        }
+    };
+
     var debounce = function (fn, delay) {
         var timer = null;
         return function () {
@@ -66,13 +94,15 @@
         };
     };
 
-
     $(function () {
         hide_timeline_blocks_outside_viewport();
         $(window).on('scroll', debounce(show_timeline_blocks_inside_viewport, 250));
+        $(window).on('scroll', debounce(highlight_active_post_dot, 300));
         
         position_dots();
         $(document).on('click', '.dot', jump_to_post);
+
+        $(window).on('load', cache_posts_top_positions);
     });
 
 }(window.jQuery));
