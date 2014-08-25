@@ -49,12 +49,9 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0 $dot_size;
     @include box-sizing();
 
     .dots {
-        width: 100%;
-        position: absolute;
         height: $footer_height;
     }
 
@@ -119,6 +116,7 @@ footer {
 
 body {
     padding-bottom: $footer_height;
+    overflow-x: hidden;
 }
 
 // Disable hover effects for touch devices

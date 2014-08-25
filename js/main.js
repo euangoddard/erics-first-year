@@ -37,7 +37,7 @@
             var $dot = $(this);
             var date = new Date($dot.data('post-date'));
             var delta = date - start_date;
-            var delta_percent = 100 * delta / date_span;
+            var delta_percent = 1 + (97 * delta / date_span);
             $dot.css({left: delta_percent + '%'});
         });
     };
