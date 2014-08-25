@@ -163,6 +163,9 @@ header h1 {
 .cd-timeline-img.cd-first {
   background: #75ce66;
 }
+.cd-timeline-img.cd-tooth {
+  background: #6081ca;
+}
 @media only screen and (min-width: 1024px) {
   .cd-timeline-img {
     width: 60px;

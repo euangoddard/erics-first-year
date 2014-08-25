@@ -10,6 +10,7 @@ $dot_desaturation: 30%;
 $color_event: rgba(#f0ca45, $dot_alpha);
 $color_meet: rgba(#c03b44, $dot_alpha);
 $color_first: rgba(#75ce66, $dot_alpha);
+$color_tooth: rgba(#6081ca, $dot_alpha);
 
 
 @mixin box-sizing($type: border-box) {
@@ -87,6 +88,13 @@ footer {
 
             &:hover {
                 background: $color_first;
+            }
+        }
+        &.dot-tooth {
+            background: desaturate($color_tooth, $dot_desaturation);
+
+            &:hover {
+                background: $color_tooth;
             }
         }
 
